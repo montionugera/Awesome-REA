@@ -312,7 +312,7 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 - [**Crash Bandicoot 2 Recompiled：基于 PSXRecomp 的原生构建**](https://github.com/Zumbo06/Crash2Recomp)
 
-  一个 Windows 启动器，借助 PSXRecomp 重编译器与运行时，将用户自备的《古惑狼 2：大脑博士的反击》光盘转换为 C 代码并在本地编译，使游戏以原生代码配合模拟的 PlayStation 硬件层运行。仓库包含启动器、打过补丁的内置运行时以及详细的调试记录，不分发任何游戏代码或数据。
+  一个 Windows 启动器，借助 PSXRecomp 重编译器与运行时，将用户自备的《古惑狼 2》光盘转换为 C 代码并在本地编译，使游戏以原生代码配合模拟的 PlayStation 硬件层运行。仓库包含启动器、打过补丁的内置运行时以及详细的调试记录，不分发任何游戏代码或数据。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/crash2recomp-case/)
 
