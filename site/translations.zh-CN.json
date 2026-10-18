@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "cbfd-recompiled-case": {
+    "name": "Conker's Bad Fur Day: Recompiled：基于 N64Recomp 的原生移植",
+    "requirements": [
+      "需要用户自备的美版 ROM，格式为大端序 .z64，且 SHA-1 与 README 所列一致；仓库和发布包均不含游戏数据。仅修改素材的 ROM 修改版可以使用，修改代码的版本以及其他地区的 ROM 会被拒绝。",
+      "V0.1.6 版本（2026-10-13）提供 Windows、Linux 和 macOS 构建以及模组压缩包。Windows 上使用 Direct3D 12 或 Vulkan 渲染，Linux 上使用 Vulkan，macOS 上使用 Metal；Linux 构建在 Ubuntu 24.04 上测试，未签名的 macOS 发布版面向 macOS 15 或更高版本的 Apple Silicon。",
+      "源码构建需要递归克隆、Git 和 Python 3，另需 Windows 上的 Visual Studio 2022+、Linux 上的 CMake、Ninja、Clang 与 SDL2，或 macOS 上的完整 Xcode 与 Homebrew，且路径中不能含撇号。N64Recomp 和 RSPRecomp 依据仓库内提交的符号文件运行；若通过可选的反编译构建重新生成该文件，还需要 IDO 和 MIPS binutils。",
+      "README 称游戏已被完整通关，但宽屏下暂停菜单背景仍有问题；macOS 上尚未确认通关，Intel Mac 尚未尝试。反编译的 C 代码必须逐字节重建 ROM 中的代码，移植版则通过游玩及与模拟器中原版对比来检查；名称被标注为推测，本合集未重跑任何检查。",
+      "作者称在重编译配置、工具补丁、宿主程序、模组和反编译函数中大量使用 Claude Code；所审来源未记录 REA 使用。项目自有代码采用 MIT，但包含 GPLv3 N64ModernRuntime 的构建整体按 GPLv3 分发，另有一个 RT64 补丁采用 GPL-2.0 或更高版本，游戏本身不在许可范围内。"
+    ]
   }
 }
