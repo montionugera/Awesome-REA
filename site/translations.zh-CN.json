@@ -1501,5 +1501,14 @@
       "项目没有测试套件：CONTRIBUTING 要求协议改动附上实机试用说明和 wire.log 片段，CLAUDE.md 称截至 2026-10-05 应用可在实机上运行。wiki 标出未确认的事实并列出未解问题，包括尚未解读的负载和与型号相关的取值；CLAUDE.md 还提到一个桌面 Python 客户端快照，但仓库中并未包含。本目录只阅读源码和文档，未运行应用或眼镜。",
       "Visor 采用 AGPL-3.0，并声明与 Meta 或 EssilorLuxottica 无关；Meta 的服务、应用令牌、固件和商标保留各自条款。CONTRIBUTING 禁止让未经 Meta 签名的软件绕过眼镜的签名检查。Claude 只是可选的助手后端之一，仓库中的 CLAUDE.md 是贡献者指南，所审阅来源未确立 REA 的使用。"
     ]
+  },
+  "rtl-433": {
+    "name": "rtl_433 ISM 频段设备无线协议解码器",
+    "requirements": [
+      "实时接收需要基于 RTL2832 的 RTL-SDR 接收棒或 SoapySDR 设备；README 列出的积极测试设备包括 LimeSDR、PlutoSDR、HackRF One 和 SoapyRemote，也可连接 rtl_tcp 服务器。没有接收机时，可读取录制的 CU8、CS16 或 CF32 I/Q 及 AM 采样文件；-S 选项可把捕获到的信号保存为文件。",
+      "以可移植的 C99 编写，使用 CMake 构建；RTL-SDR 与 SoapySDR 库在构建时均为可选，只有 TLS 输出需要 OpenSSL。Debian/Ubuntu（rtl-433）、FreeBSD 和 Homebrew 提供软件包；25.12 版（2025-12-12）提供 Linux、macOS arm64 和 Windows 二进制文件，所审阅的 master 提交日期为 2026-10-11。",
+      "审阅时 README 列出 380 个设备协议，编号至 386，其中 44 个默认禁用，需通过 -R 或配置文件启用。内置解码器只覆盖所列型号；对其他信号，分析器和灵活解码器只对 OOK/FSK 脉冲分帧并切分为比特，不会推断字段含义或协议语义。",
+      "采用 GPL-2.0。可选的 HTTP API 输出默认监听 0.0.0.0:8433。本次未进行任何采集、解码或分析，也不代表任何设备兼容性。"
+    ]
   }
 }
