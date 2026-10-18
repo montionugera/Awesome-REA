@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "cv64-recompiled-case": {
+    "name": "Castlevania 64: Recompiled：测试版静态重编译移植",
+    "requirements": [
+      "AppStream 元数据将 Castlevania 64: Recompiled 描述为使用 N64: Recompiled 的静态重编译项目，生成以 RT64 渲染的原生移植。在所审提交上标记的 v0.5.0 测试版发布称构建可用，并列出已知问题：Banjo Recomp 素材尚待替换、纹理滚动在 30 FPS 以上不会播放动画，以及部分循环动画会出现异常。同一提交的 README 仍称这个进行中的重编译项目无法构建，BUILDING.md 也只写有 WIP。",
+      "元数据说明运行需要原版游戏。启动器只接受一个条目，即以固定 ROM 哈希识别的美版 1.0（游戏 ID 为 cv64.us.1.0）；cv64.toml 以解压后的 ELF 及覆盖模块列表配置 NTSC 1.0 重编译。CI 通过机密信息从私有仓库复制该 ELF 和解压后的 ROM，二者均不在公开仓库中。",
+      "CMake 项目需要 CMake 3.20+、C++20 以及 N64Recomp 和 RSPRecomp 工具；工作流固定一个 N64Recomp 提交，构建 Linux x64 与 ARM64 AppImage、x64 Flatpak、Windows 及 macOS 目标。补丁以 clang 和 ld.lld 编译为 MIPS 代码，依赖 k64ret/cv64 反编译子模块的头文件、CV64Syms 的符号导出，以及 N64ModernRuntime、RecompFrontend 和 RT64 子模块。部分源文件和函数仍沿用 Banjo 命名。",
+      "所审提交记录的 GitHub 检查报告上述平台构建成功。这只表明私有输入可以编译，不代表游戏行为保真；项目未记录一致性、测试或性能结果。本合集未下载发布的二进制文件，也未重跑任何构建。",
+      "COPYING 为 GPLv3，元数据声明 GPL-3.0+；原 ROM 和各依赖仍有各自条款。这是静态重编译，不是恢复原作者源码，也不是完整反编译。所审来源未确立 REA 或编码代理参与，也不主张运行复现。"
+    ]
   }
 }
