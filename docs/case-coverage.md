@@ -22,13 +22,13 @@ Repository counts use normalized GitHub repository, tree and file links within e
 
 | State | Occurrences | Inventory units | Meaning |
 | --- | ---: | ---: | --- |
-| Already curated (`already-curated`) | 63 | 62 | Full-scope identity mapping to a catalog resource or paper; not independent runtime reproduction. |
-| Pending (`pending`) | 464 | 463 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
+| Already curated (`already-curated`) | 64 | 63 | Full-scope identity mapping to a catalog resource or paper; not independent runtime reproduction. |
+| Pending (`pending`) | 463 | 462 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
 | Insufficient evidence (`insufficient-evidence`) | 64 | 64 | An idea, request or unsupported reconstruction claim is retained as a lead. |
 
-70 occurrences have catalog links. They reference 61 distinct resource IDs and 1 paper ID. Match scope is recorded separately; do not add these populations as unique projects.
+71 occurrences have catalog links. They reference 62 distinct resource IDs and 1 paper ID. Match scope is recorded separately; do not add these populations as unique projects.
 
-This ledger records a new primary-source review for 72 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
+This ledger records a new primary-source review for 73 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
 
 Repository README scan IDs and counts are deliberately absent. A successful README fetch, an upstream list entry and a source-reviewed case are different facts.
 
@@ -89,6 +89,7 @@ Repository README scan IDs and counts are deliberately absent. A successful READ
 | Super Mario 64: ROM reconstruction with explicit comparison gates | Already curated | [Source](https://github.com/n64decomp/sm64/blob/9921382a68bb0c865e5e45eb594d9c64db59b1af/README.md) |
 | 🗡️ The Legend of Zelda: Breath of the Wild — zeldaret/botw | Pending | [Source](https://github.com/zeldaret/botw/blob/e78c02499d0f108ae9c00158198289764c5980fe/README.md) |
 | 🗡️ The Legend of Zelda: Ocarina of Time — zeldaret/oot | Pending | [Source](https://github.com/zeldaret/oot/blob/8a3634ca774a9b58d822cbc2cc09309f31eac6a4/README.md) |
+| The Wind Waker: a GameCube decompilation with hash-checked relinking | Already curated | [Source](https://github.com/zeldaret/tww/blob/8b93b372dc8e841f12ddfb7e0215626f62b05417/README.md) |
 | Zelda 64: Recompiled — a native Majora’s Mask port without a full source decompilation | Already curated | [Source](https://github.com/Zelda64Recomp/Zelda64Recomp/blob/b65c482ed672258eb684ab94a4e8c8aa662615ee/README.md) |
 | 🗡️ The Legend of Zelda: The Minish Cap — zeldaret/tmc | Pending | [Source](https://github.com/zeldaret/tmc/blob/6fb6dfb4a7efbe24d0fd1dda5097af6131faacde/README.md) |
 | 🚀 Metroid Prime — AxioDL/metaforce | Pending | [Source](https://github.com/AxioDL/metaforce/blob/de8fc69bd7f345d6cf5f0c8fc2798295e22522d3/README.md) |
