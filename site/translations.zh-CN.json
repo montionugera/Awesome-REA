@@ -1481,5 +1481,15 @@
       "验证流程将一个以 SHA-256 固定的 harmony-next-pipeline 1.0.1 HAP（源码仓库采用 MIT 许可）下载到被忽略的目录，检查清单真实性、投影确定性、Stage 路径提示、精确组件集合、完整覆盖以及命令行与 MCP 的一致性。该测试包的编译器／SDK 版本与可复现构建尚未确立，此流程也未完成路线图 issue #1431 中固定工具链的验收；缺少 META-INF 条目不能说明包是否已签名。",
       "REA 声明 MIT。被分析的应用包保留各自许可；指南说明测试包内捆绑组件的许可未经独立审核，下载的产物也不会再分发。已合并的 PR #1447 引入了这一增量。本合集未运行 REA 或任何应用包。"
     ]
+  },
+  "pokemon-heartgold-soulsilver-disassembly-case": {
+    "name": "《宝可梦 心金／魂银》：校验一致的进行中 DS 反汇编项目",
+    "requirements": [
+      "README 称其为美版的进行中反汇编项目；提醒符号名与代码结构可能变化，并因 ROM 尚未完全反编译，改变任何函数或数据结构大小或布局的修改都可能使游戏崩溃。在所审提交中，asm/ 仍有 283 个汇编文件，src/ 中有 406 个 C 文件；CONTRIBUTING.md 说明 NONMATCHING 的 C 实现与一致性构建所用的内联汇编版本并存。产物为 pokeheartgold.us.nds 和 pokesoulsilver.us.nds，不是 PC 移植。",
+      "文档所述的构建不读取原 ROM：DS 文件系统中的图像、模型、文本和数据文件提交在 files/ 下。目标镜像以 SHA-1 标识（心金 4fcded0e2713dc03929845de631d0932ea2b5a37，魂银 f8dc38ea20c17541a43b58c5e6d18c1732c7e582），README 链接其 No-Intro 条目。只有贡献者使用的 asmdiff 工具会用到使用者自备的原 ROM。",
+      "INSTALL.md 涵盖 WSL2（推荐）、WSL1、MSYS2、macOS 以及 Debian、Arch 和 Fedora Linux；所需软件包括 ARM GCC 工具链、bison、flex、Ninja、Python 3、libpng 和 32 位 libc，macOS 另需 Wine。Makefile 会克隆 Meson 1.12.0，并下载 metroskrew 0.1.3 发行版，其仓库称之为通过重新链接移植到 Linux 的专有 Windows 版 Metrowerks ARM 编译器；Meson 拉取固定版本的 NitroSDK、NitroSystem、NitroDWC、NitroWiFi 和 libvct 子项目。make 构建心金，make soulsilver 构建魂银。",
+      "make 构建完成后运行 Meson 测试，按 SHA-1 清单校验 ARM9 主程序、ARM7 程序、文件系统及完整 ROM；Makefile 说明改版作者可在首次构建后去掉这项检查。CI 构建并校验两款游戏，推送时还会计算进度。哈希一致只确认这两个美版镜像的一致性，不代表反编译已完成或覆盖游戏行为路径；本合集未自行构建。",
+      "仓库没有顶层许可证文件，GitHub 也未识别出许可证；部分附带工具有各自的许可证，metroskrew 及 ntrtwl 的 SDK 仓库在 GitHub 上均未声明许可证。SDK 库和原游戏内容仍受其权利人约束。CONTRIBUTING.md 禁止由大语言模型生成的贡献，仅有少数需完整披露的例外；所审来源未确立本项目的 AI 或 REA 使用，也不主张运行复现。"
+    ]
   }
 }
