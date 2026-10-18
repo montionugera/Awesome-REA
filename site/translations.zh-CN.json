@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "paper-mario-matching-decomp-case": {
+    "name": "Paper Mario：覆盖四个版本的一致性 Nintendo 64 反编译",
+    "requirements": [
+      "README 称这是一个进行中的反编译项目，可构建美版、日版、PAL 版和 iQue 版 ROM，并分别列出 SHA-1。针对所审版本，papermar.io 可变的进度 CSV 显示四个版本均无未匹配函数（美版共 12,679 个），其美版页面宣布美版、PAL 版和 iQue 版已达 100%。产物是 N64 ROM，不是原生 PC 可执行文件；HarbourMasters 的 PaperBoat 移植是另一个项目。",
+      "至少需要一个自行取得、且与所列 SHA-1 一致的原始 ROM，作为对应版本的 baserom.z64 提供；Nix 方式要求四个版本齐备。configure 会从这些 ROM 拆分素材，源码不附带 ROM 或提取后的素材。",
+      "SETUP.md 支持 Linux、macOS、WSL 2 和 Nix。构建使用 Python configure 脚本和 ninja、通过 cargo 安装的 pigment64、宿主 MIPS binutils／GCC／cpp，以及下载的编译器：项目自有 GCC／binutils、GCC 2.7.2、EGCS 和静态重编译的 IDO 5.3。由于 macOS 上没有 EGCS，configure 拒绝在 macOS 上进行 iQue 一致性构建。",
+      "一致性构建最后会依据各版本的 checksum.sha1 执行 sha1sum 校验，输出“papermario.z64: OK”。--non-matching、--modern-gcc 和 --shift 构建跳过该校验，因此不属于一致性结果。Jenkins 构建全部四个版本及一个可平移的美版构建，并发布进度报告；本合集未运行上述任何检查。",
+      "所审源码树没有顶层许可证文件，GitHub 也未识别出许可证，因此未确立源码的再使用授权。原 ROM 和提取的素材仍受各自权利约束，下载的编译器另有条款。所审来源未确立 AI 或 REA 使用归因，也不主张运行复现。"
+    ]
   }
 }
