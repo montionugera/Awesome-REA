@@ -23,12 +23,12 @@ Repository counts use normalized GitHub repository, tree and file links within e
 | State | Occurrences | Inventory units | Meaning |
 | --- | ---: | ---: | --- |
 | Already curated (`already-curated`) | 65 | 64 | Full-scope identity mapping to a catalog resource or paper; not independent runtime reproduction. |
-| Pending (`pending`) | 460 | 459 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
-| Insufficient evidence (`insufficient-evidence`) | 66 | 66 | An idea, request or unsupported reconstruction claim is retained as a lead. |
+| Pending (`pending`) | 454 | 453 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
+| Insufficient evidence (`insufficient-evidence`) | 72 | 72 | An idea, request or unsupported reconstruction claim is retained as a lead. |
 
 72 occurrences have catalog links. They reference 63 distinct resource IDs and 1 paper ID. Match scope is recorded separately; do not add these populations as unique projects.
 
-This ledger records a new primary-source review for 76 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
+This ledger records a new primary-source review for 82 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
 
 Repository README scan IDs and counts are deliberately absent. A successful README fetch, an upstream list entry and a source-reviewed case are different facts.
 
@@ -57,7 +57,13 @@ Repository README scan IDs and counts are deliberately absent. A successful READ
 | pi-computer-use: desktop interaction for other models | Insufficient evidence | [Source](https://github.com/injaneity/pi-computer-use/blob/67e9e2f77643f84605b738a3198048a88e92190e/README.md) |
 | Background Computer Use in Swift | Insufficient evidence | [Source](https://github.com/actuallyepic/background-computer-use/blob/52116acfe0f2f57174f5e0166881abe944cb6eeb/README.md) |
 | GameCube/Wii PowerPC support request | Insufficient evidence | [Source](https://github.com/morluto/rea/issues/1741) |
+| Business software: an ongoing agent-assisted rebuild | Insufficient evidence | [Source](https://x.com/iamsupersocks/status/2109553690595979371) |
+| CapCut transitions: a module-reconstruction lead | Insufficient evidence | [Source](https://x.com/fireandstart/status/2109554617004466397) |
 | CF632BLE: a local client from scale-protocol research | Already curated | [Source](https://github.com/guyru/cf632ble/blob/c029ef5cfefbd323ffe2a194a75db5cc47aa6d5c/README.md) |
+| Android app: inspecting root checks and certificate pinning | Insufficient evidence | [Source](https://x.com/IanJKerins/status/2109559519584088093) |
+| Kindle: Android firmware for WeRead | Insufficient evidence | [Source](https://x.com/hbyxabc/status/2109583911483519202) |
+| Proxy client: restoring a Clash subscription bridge | Insufficient evidence | [Source](https://x.com/web3_fising/status/2109601382273880327) |
+| Controlled JS/.NET samples: Codex with and without REA | Insufficient evidence | [Source](https://x.com/0xlangeai/status/2109603485914206498) |
 | Netflix/Prime: a reported unified streaming interface | Insufficient evidence | [Source](https://x.com/HigbeyMyrta/status/2109596534350524664) |
 | fowlbrowser: an existing-session browser bridge for agents | Insufficient evidence | [Source](https://github.com/argofowl/FowlBrowser/blob/18f7519fa27289885c95b67eff714401ffff51f0/README.md) |
 | OpenSetter: rebuilding comment-to-DM flows with an AI setter | Insufficient evidence | [Source](https://github.com/xbirimensah/opensetter/blob/40dc5ae2fde0b3930e6b59132eaf061edb0da0a8/README.md) |
