@@ -11,7 +11,7 @@
 <a href="https://awesomerea.org/zh/"><img src="assets/readme-banner.svg" alt="Awesome Reverse Engineering Anything — 覆盖六类逆向目标的工具、案例与论文" width="960"></a>
 
 <!-- BEGIN GENERATED BADGES -->
-[![精选资源: 223](https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%B5%84%E6%BA%90-223-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/resources/) [![案例: 84](https://img.shields.io/badge/%E6%A1%88%E4%BE%8B-84-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/cases/) [![论文: 53](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-53-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/papers/) [![目录检查](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml) [![许可: MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-606779?style=flat-square&labelColor=303447)](LICENSE) [![网站: awesomerea.org](https://img.shields.io/badge/%E7%BD%91%E7%AB%99-awesomerea.org-6235B5?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/)
+[![精选资源: 224](https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%B5%84%E6%BA%90-224-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/resources/) [![案例: 85](https://img.shields.io/badge/%E6%A1%88%E4%BE%8B-85-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/cases/) [![论文: 53](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-53-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/papers/) [![目录检查](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml) [![许可: MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-606779?style=flat-square&labelColor=303447)](LICENSE) [![网站: awesomerea.org](https://img.shields.io/badge/%E7%BD%91%E7%AB%99-awesomerea.org-6235B5?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/)
 <!-- END GENERATED BADGES -->
 
 **[搜索与筛选](https://awesomerea.org/zh/)** · **[浏览案例](https://awesomerea.org/zh/cases/)** · **[研究论文](https://awesomerea.org/zh/papers/)** · **[HTML 综述](https://awesomerea.org/zh/survey/)**
@@ -23,7 +23,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (17) · [游戏](#game) (67) · [应用](#app) (44)
+- [网站](#website) (17) · [游戏](#game) (68) · [应用](#app) (44)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -32,7 +32,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (84) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (85) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -467,6 +467,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   从《恶魔城 月下夜想曲》的 PlayStation、PSP 和 Saturn 版二进制重建 C 源码，目标是逐字节编译出与原游戏文件一致的产物。这一进行中的构建将已反编译代码与从使用者自备光盘镜像提取的素材和汇编结合，再按版本检查 SHA-1 哈希。同一仓库中的原生 PC 实验被文档说明为尚未完成，并不是已发布的移植。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/sotn-matching-decomp-case/)
+
+- [**LEGO Island 可移植版：反编译源码的多平台移植**](https://github.com/isledecomp/isle-portable)
+
+  将 LEGO Island 反编译源码改造为可在桌面、移动设备、游戏主机、DOS 及 Web 上构建的移植版本。项目以 SDL3、miniaudio、iniparser 和自行重新实现的 Direct3D Retained Mode 替代仅限 Windows 的子系统，并力求保持核心玩法不变。它移植的是重建源码，而不校验与原版逐字节一致的二进制文件，因此有别于精确重构建的反编译案例。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/lego-island-portable-case/)
 
 #### 工具、项目与集成
 
