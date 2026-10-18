@@ -11,7 +11,7 @@
 <a href="https://awesomerea.org/zh/"><img src="assets/readme-banner.svg" alt="Awesome Reverse Engineering Anything — 覆盖六类逆向目标的工具、案例与论文" width="960"></a>
 
 <!-- BEGIN GENERATED BADGES -->
-[![精选资源: 195](https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%B5%84%E6%BA%90-195-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/resources/) [![案例: 57](https://img.shields.io/badge/%E6%A1%88%E4%BE%8B-57-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/cases/) [![论文: 53](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-53-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/papers/) [![目录检查](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml) [![许可: MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-606779?style=flat-square&labelColor=303447)](LICENSE) [![网站: awesomerea.org](https://img.shields.io/badge/%E7%BD%91%E7%AB%99-awesomerea.org-6235B5?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/)
+[![精选资源: 196](https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%B5%84%E6%BA%90-196-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/resources/) [![案例: 58](https://img.shields.io/badge/%E6%A1%88%E4%BE%8B-58-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/cases/) [![论文: 53](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-53-53309C?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/papers/) [![目录检查](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/reacher-z/Awesome-REA/actions/workflows/validate.yml) [![许可: MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-606779?style=flat-square&labelColor=303447)](LICENSE) [![网站: awesomerea.org](https://img.shields.io/badge/%E7%BD%91%E7%AB%99-awesomerea.org-6235B5?style=flat-square&labelColor=303447)](https://awesomerea.org/zh/)
 <!-- END GENERATED BADGES -->
 
 **[搜索与筛选](https://awesomerea.org/zh/)** · **[浏览案例](https://awesomerea.org/zh/cases/)** · **[研究论文](https://awesomerea.org/zh/papers/)** · **[HTML 综述](https://awesomerea.org/zh/survey/)**
@@ -23,7 +23,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -32,7 +32,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -317,6 +317,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**Starship：基于反编译的 Star Fox 64 PC 移植**](https://github.com/HarbourMasters/Starship)
+
+  Star Fox 64 的原生 PC 移植：将游戏的反编译 C 代码与 libultraship 一同编译，该 N64 移植库重新实现了 libultra，并通过 Fast3D 渲染。首次运行时借助 Torch 工具把使用者的美版 ROM 转换为素材资源包，提供 Windows、Linux、macOS 和 Switch 版本。独立的静态重编译项目 Starfox 64: Recompiled 在其 README 中称本移植为采用不同技术的姊妹项目。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/starship-sf64-pc-port-case/)
 
 #### 工具、项目与集成
 
