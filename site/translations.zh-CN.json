@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "rea-ghidra-nativeaot-guide": {
+    "name": "借助 Ghidra 恢复 NativeAOT 元数据",
+    "requirements": [
+      "审阅时 main 上为 rea-agents 6.7.0，声明支持 Node ^22.19.0、^24.11.0 或 26 及以上。需自备 Ghidra 与 JDK；指南中的 Windows 检查使用 Ghidra 12.1.4 与 JDK 21。内置解析器支持带 .NET 8 RTR 9.1 元数据的 x64 PE32+，要求 RTR 头唯一且恰有一行 DEHYDRATED_DATA；其他 RTR 版本与 PE 架构会报告为不支持或部分覆盖。普通 PE/CLI 或 ReadyToRun 程序集应改用 REA 的托管代码工具。",
+      "可选适配器需用现有的 git、javac 与 jar，从固定版本且未修改的 Washi1337/ghidra-nativeaot 检出构建；REA 记录 JAR 的 SHA-256，复制后在加载前重新校验摘要。JAR 在 Ghidra 内执行，请使用可信的构建。适配器在临时 Program 事务中添加注释，从不修改原始可执行文件。它在 Windows Ghidra P0 上不可用；在该环境中，读取数据库的工具看不到重新水合的字节，槽位目标来自解析器报告。",
+      "输出包括 MethodTable 地址、基类型、接口、虚表槽位与冻结字符串，并受文档列明的本地上限约束，例如采集的 PE 字节最多 128 MiB、报告 JSON 最多 4 MiB；超出报告预算的行会被省略并标为部分覆盖。类型识别采用上游的启发式方法，方法原型仍属推断。伪代码是恢复的原生逻辑，并非原始 C# 源码；原始类／成员名称及自定义字段布局仍然未知。",
+      "验证使用自行构建的无害 .NET 8.0.22 测试程序，以独立的编译器／链接器符号和目录字节作为对照基准，另有去除符号的样本和负面输入；测试程序从不执行，构建它们需要 .NET SDK 8.0.416 及对应平台的 NativeAOT 工具。真实 MCP 测试流程只在装有适配器的 Linux x64 主机上运行。Windows 主机行为仅在 Windows 11 x64 上不带 JAR 手动检查过一次，对照测试程序基准与链接映射；没有 CI 流程重复该检查。",
+      "REA 声明 MIT。解析器的水合语义改编自 Washi1337/ghidra-nativeaot（MIT，其声明随附于 licenses/ 目录），并对照 .NET 的 MethodTable.h 核对。被分析的可执行文件保留各自许可。已合并的 PR #748 引入了该集成，issue #744 记录了相应请求及其关闭，且未主张重建 C# 项目。本合集未运行 REA、Ghidra 或任何测试程序。"
+    ]
   }
 }

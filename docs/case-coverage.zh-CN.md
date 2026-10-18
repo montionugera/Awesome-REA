@@ -22,11 +22,11 @@
 
 | 状态 | 出现项 | 清单单元 | 含义 |
 | --- | ---: | ---: | --- |
-| 已收录 (`already-curated`) | 63 | 62 | 完整范围已对应目录资源或论文；不代表独立运行复现。 |
+| 已收录 (`already-curated`) | 64 | 63 | 完整范围已对应目录资源或论文；不代表独立运行复现。 |
 | 待核查 (`pending`) | 464 | 463 | 一手核查或完整目录覆盖尚待完成；部分映射也保留在此状态。 |
-| 证据不足 (`insufficient-evidence`) | 64 | 64 | 将想法、请求或尚缺支持的重建说法保留为线索。 |
+| 证据不足 (`insufficient-evidence`) | 63 | 63 | 将想法、请求或尚缺支持的重建说法保留为线索。 |
 
-70 个出现项含目录链接；共关联 61 个不同资源 ID 和 1 个论文 ID。映射范围单独记录，不能将这些群体相加当作独立项目数。
+71 个出现项含目录链接；共关联 62 个不同资源 ID 和 1 个论文 ID。映射范围单独记录，不能将这些群体相加当作独立项目数。
 
 此记录为 72 个清单单元记载了新的一手来源核查。其他已有目录链接的条目对应目录中独立的来源核查记录；链接本身不代表重新核查了整篇合集报告。此记录没有独立复现运行实验。
 
@@ -48,7 +48,7 @@
 | PhotoCraft：编辑流程重建与 PSD 往返边界 | 待核查 | [来源](https://github.com/storytold/photocraft/blob/5f65579ecb44047c2a619036c18ff273202e1389/README.md) |
 | Unity/Valheim assemblies | 证据不足 | [来源](https://github.com/morluto/rea/issues/1801) |
 | Large multidex Android APK | 证据不足 | [来源](https://github.com/morluto/rea/issues/893) |
-| .NET NativeAOT recovery request | 证据不足 | [来源](https://github.com/morluto/rea/issues/744) |
+| 借助 Ghidra 恢复 NativeAOT 元数据 | 已收录 | [来源](https://github.com/morluto/rea/issues/744) |
 | Windows Calculator：重建百分比规则 | 已收录 | [来源](https://github.com/morluto/rea/blob/c360cfcd6d7901514b16dd6113eba2e0b0fdf422/website/evidence/calculator-and-dino.md) |
 | Android ApiDemos: tracing Java methods from an APK | 证据不足 | [来源](https://github.com/morluto/rea/pull/738) |
 | Browserbase 插件：将 Claude in Chrome 浏览器桥接转接到云端 | 已收录 | [来源](https://github.com/browserbase/claude-code-plugin/blob/b399af34a1b1cc365d1e1c0089823c4fa5e10ea5/forwarding-server.js) |
