@@ -1481,5 +1481,15 @@
       "验证流程将一个以 SHA-256 固定的 harmony-next-pipeline 1.0.1 HAP（源码仓库采用 MIT 许可）下载到被忽略的目录，检查清单真实性、投影确定性、Stage 路径提示、精确组件集合、完整覆盖以及命令行与 MCP 的一致性。该测试包的编译器／SDK 版本与可复现构建尚未确立，此流程也未完成路线图 issue #1431 中固定工具链的验收；缺少 META-INF 条目不能说明包是否已签名。",
       "REA 声明 MIT。被分析的应用包保留各自许可；指南说明测试包内捆绑组件的许可未经独立审核，下载的产物也不会再分发。已合并的 PR #1447 引入了这一增量。本合集未运行 REA 或任何应用包。"
     ]
+  },
+  "two-towers-recompiled-case": {
+    "name": "The Two Towers Recompiled：初代 Xbox 静态重编译移植",
+    "requirements": [
+      "v1.9.2 的 README 称该移植仍在进行中但已可完整游玩，建议以 60 FPS 运行；解锁帧率和宽屏为实验性功能。下载包涵盖 64 位 Windows 7 SP1 至 11、glibc 2.27+ 的 x86-64 Linux，以及 Intel 或经 Rosetta 2 运行的 macOS 10.15+，其中 macOS 版尚未在 Mac 上测试。已知问题包括角色阴影拉伸、光照异常、Vulkan 黑屏，以及随附额外英雄模组的若干问题。",
+      "玩家需自备美版 Xbox 光盘镜像或已提取的游戏文件夹，仓库不含任何游戏数据。generate.py 以固定 SHA-256 校验零售版 default.xbe，然后运行 xboxrecomp 流程（XBE 解析、反汇编、函数识别、ABI 分析、命名和重编译），在本地写出 C 源码，因此仓库未提交任何重编译代码。另行发布的 GameCube 高清纹理包为可选项，不属于本发布。",
+      "仓库内置 xboxrecomp 0.12.0 静态重编译工具包，它将 XBE 的 x86 代码转换为 C；CHANGES.md 列出了为本游戏对其所做的修正。游戏项目使用 CMake 3.20+ 和 C11，可用 MSVC、MinGW 或 Clang/GCC 构建；Linux 使用 SDL2 并在运行时加载 OpenGL，渲染选项为 Direct3D 11、经 DXVK 的 Vulkan 或 OpenGL。该版本的 README 没有构建章节，generate.py 只说明之后用 CMake 构建。",
+      "1.9.2 报告的测试覆盖 Wine 下及 Linux OpenGL 环境中多种语言的菜单、关卡加载和字体，并称 Windows、Linux 和 macOS 构建均可编译。所审提交没有自动化测试或 CI 运行记录，本合集也未下载发布包或重跑任何内容。",
+      "LICENSE.txt 对移植自身代码（twotowers/ 和 generate.py）采用 MIT；内置的 xboxrecomp 保留 MIT，其中取自 xemu 的部分为 LGPL-2.1-or-later。许可证还说明，发布包中的游戏程序含有从原始可执行文件机械转换而来的代码，这部分不受该许可证覆盖，仍归权利人所有。所审来源未确立 REA 参与，也不主张运行复现。"
+    ]
   }
 }
