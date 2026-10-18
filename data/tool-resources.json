@@ -3548,5 +3548,38 @@
       "https://github.com/Xeeynamo/sotn-decomp/wiki/Build",
       "https://github.com/Xeeynamo/sotn-decomp/wiki/PC-Port"
     ]
+  },
+  {
+    "id": "lego-island-portable-case",
+    "name": "LEGO Island, portable: a multi-platform port of the decompiled source",
+    "url": "https://github.com/isledecomp/isle-portable",
+    "category": "reconstruction-cases",
+    "relationship": "independent-reconstruction",
+    "kind": "case-study",
+    "targets": [
+      "game"
+    ],
+    "description_en": "Adapts the LEGO Island decompilation into a portable build for desktop, mobile, console, DOS and Web targets. Windows-only subsystems are replaced with SDL3, miniaudio, iniparser and a custom Direct3D Retained Mode re-implementation, while core gameplay is meant to stay unchanged. It ports reconstructed source rather than checking byte-identical binaries, so it is distinct from the exact-rebuild decompilation case.",
+    "description_zh": "将 LEGO Island 反编译源码改造为可在桌面、移动设备、游戏主机、DOS 及 Web 上构建的移植版本。项目以 SDL3、miniaudio、iniparser 和自行重新实现的 Direct3D Retained Mode 替代仅限 Windows 的子系统，并力求保持核心玩法不变。它移植的是重建源码，而不校验与原版逐字节一致的二进制文件，因此有别于精确重构建的反编译案例。",
+    "evidence_url": "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/README.md",
+    "verified_at": "2026-10-18",
+    "verification": "source-reviewed",
+    "requirements": [
+      "README describes a portable version of English LEGO Island 1.1 built on isledecomp/isle, aiming at platform independence without gameplay changes or rewrites for their own sake, and the contributor guide accepts LEGO1 changes mainly when they serve platform compatibility. Light modding goes through extensions, which in the reviewed tree include multiplayer, a third-person camera and asset loaders. The status table lists Windows, macOS, Linux, FreeBSD, DOS, Web, iOS, Android, Xbox One, PlayStation Vita, Nintendo Switch and Nintendo 3DS.",
+      "An existing copy of LEGO Island is required. The guided installer asks for the retail CD-ROM or a disc image made from it and says any 1.0 or 1.1 retail version in any language works; its optional HD audio pack is limited to English 1.1. The installer describes the isle.pizza Web build as streaming the game without a local disc; this review did not examine what that site serves or on what basis.",
+      "Builds use CMake 3.25+ with a C++17 compiler; by default CMake fetches SDL3 and iniparser, and libsmacker and miniaudio are submodules. README points to the CI workflow instead of a separate build guide; that workflow uses MSVC, MinGW, macOS/Linux toolchains and platform SDKs such as Emscripten, devkitPro, VitaSDK, DJGPP and Android, and the desktop settings tool needs Qt 6. Release downloads are continuous builds of master, which README warns may regress.",
+      "The reviewed CI checks formatting and configures, builds and packages each platform target; it does not run the game or compare its behavior with the original. The per-platform status entries are CI badges, not gameplay-parity results. Kaitai Struct descriptions document save, animation, world-database and texture formats. This collection did not build or run the port.",
+      "The repository carries LGPL-3.0; bundled and fetched third-party libraries keep their own terms, and the original game data, LEGO trademarks and the bitmaps the installer takes from the original setup program retain separate rights. The reviewed sources establish no AI or REA attribution."
+    ],
+    "additional_evidence_urls": [
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/CONTRIBUTING.md",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/CMakeLists.txt",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/.gitmodules",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/.github/workflows/ci.yml",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/installer/README.md",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/installer/index.html",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/docs/README.md",
+      "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/LICENSE"
+    ]
   }
 ]

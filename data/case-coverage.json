@@ -10833,13 +10833,27 @@
         "https://github.com/isledecomp/isle-portable",
         "https://isle.pizza/"
       ],
-      "state": "pending",
-      "review_level": "inventory-only",
-      "reviewed_at": "2026-10-17",
-      "reason_en": "Project row 48 (README line 448) lists isledecomp/isle-portable under 🧭 LEGO Island. Primary implementation, prerequisites and reported results remain unreviewed; this row is not a verified reconstruction.",
-      "reason_zh": "项目第 48 行（README 第 448 行）在 🧭 LEGO Island 下列出 isledecomp/isle-portable。其一手实现、使用条件和报告结果仍待核查；该行不是已经核验的重建成果。",
-      "primary_evidence_urls": [],
-      "catalog_matches": []
+      "state": "already-curated",
+      "review_level": "primary-source-reviewed",
+      "reviewed_at": "2026-10-18",
+      "reason_en": "Pinned README, contributor guide, build files, CI workflow and guided installer support the reported portable adaptation of the isledecomp source, its original-disc requirement and its platform list. The full mapping covers this port, not the separately curated exact-rebuild decompilation, gameplay parity or the hosted Web copy. CI badges are build results, and no runtime reproduction is claimed.",
+      "reason_zh": "固定版本的 README、贡献指南、构建文件、CI 工作流及引导安装器，支持该报告所述基于 isledecomp 源码的可移植适配、原版光盘要求及平台列表。完整映射覆盖此移植项目，不涵盖另行收录的精确重构建反编译、玩法一致性或网站托管的 Web 版本。CI 徽章仅为构建结果，未主张运行复现。",
+      "primary_evidence_urls": [
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/README.md",
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/CONTRIBUTING.md",
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/CMakeLists.txt",
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/.github/workflows/ci.yml",
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/installer/index.html",
+        "https://github.com/isledecomp/isle-portable/blob/d0bf04fe605d7ec2a291e65df08bf26712452379/LICENSE"
+      ],
+      "catalog_matches": [
+        {
+          "catalog": "resource",
+          "id": "lego-island-portable-case",
+          "kind": "case-study",
+          "scope": "full"
+        }
+      ]
     },
     {
       "id": "hao-games:row-049",
@@ -13831,18 +13845,18 @@
     "inventory_units": 589,
     "alias_merges": 2,
     "occurrences_by_state": {
-      "already-curated": 89,
-      "insufficient-evidence": 78,
-      "pending": 424
-    },
-    "units_by_state": {
-      "already-curated": 88,
+      "already-curated": 90,
       "insufficient-evidence": 78,
       "pending": 423
     },
-    "primary_reviewed_units": 109,
-    "catalog_linked_occurrences": 100,
-    "distinct_resource_ids": 94,
+    "units_by_state": {
+      "already-curated": 89,
+      "insufficient-evidence": 78,
+      "pending": 422
+    },
+    "primary_reviewed_units": 110,
+    "catalog_linked_occurrences": 101,
+    "distinct_resource_ids": 95,
     "distinct_paper_ids": 1,
     "unique_projects": null
   }

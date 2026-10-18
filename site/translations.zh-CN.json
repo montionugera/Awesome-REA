@@ -1770,5 +1770,15 @@
       "除非设置 SKIP_CHECK，固定版本的构建代码会依据 config/check.<version>.sha 对产物计算哈希：us 清单列出 main.exe、DRA.BIN、RIC.BIN 及关卡和覆盖模块文件，hd、pspeu 与 saturn 的清单较短。wiki 仍提到 make check 步骤，但固定版本的 Makefile 并未定义该目标。这些检查比较所供版本的文件一致性，不覆盖游戏行为，本合集也未重跑。",
       "Makefile 也接受 pc 版本，src/pc 中有原生移植代码，但 PC Port wiki 页面说明目前尚无基于反编译、可端到端运行的移植；此处不主张存在 PC 移植。仓库声明采用 AGPL-3.0，光盘镜像、提取的素材和汇编以及下载的编译器各有权利约束。CONTRIBUTING 仅允许贡献者能够说明理由并可手动操作的编码代理辅助改动，并要求提交与拉取请求不得由自主工具生成；这不确立 REA 使用，也不主张运行复现。"
     ]
+  },
+  "lego-island-portable-case": {
+    "name": "LEGO Island 可移植版：反编译源码的多平台移植",
+    "requirements": [
+      "README 将其描述为基于 isledecomp/isle 的英文版 LEGO Island 1.1 可移植版本，目标是实现平台无关，不改动玩法，也不为改进而重写代码；贡献指南表示，对 LEGO1 代码的修改通常只在直接提升平台兼容性时才会接受。轻度模组通过 extensions 实现，所审版本包含多人联机、第三人称镜头和素材加载器。状态表列出 Windows、macOS、Linux、FreeBSD、DOS、Web、iOS、Android、Xbox One、PlayStation Vita、Nintendo Switch 和 Nintendo 3DS。",
+      "需已有一份 LEGO Island。引导安装器要求零售版 CD-ROM 或由其制作的光盘镜像，并称任何语言的 1.0 或 1.1 零售版均可；可选的高清音频包仅适用于英文 1.1 版。安装器称 isle.pizza 的 Web 版本以串流方式运行、无需本地光盘；本次核查未检查该网站提供的内容及其依据。",
+      "构建使用 CMake 3.25+ 和 C++17 编译器；CMake 默认下载 SDL3 和 iniparser，libsmacker 与 miniaudio 为子模块。README 未提供单独的构建指南，而是让读者参考 CI 工作流；该工作流使用 MSVC、MinGW、macOS／Linux 工具链以及 Emscripten、devkitPro、VitaSDK、DJGPP、Android 等平台 SDK，桌面设置工具需要 Qt 6。发布下载为 master 的持续构建，README 提醒可能出现回归。",
+      "所审 CI 检查代码格式，并为各平台目标完成配置、构建和打包；它不运行游戏，也不与原版行为比较。各平台状态项是 CI 徽章，不是玩法一致性结果。Kaitai Struct 描述文件记录了存档、动画、世界数据库和纹理格式。本合集未构建或运行该移植。",
+      "仓库采用 LGPL-3.0；内置及下载的第三方库各自适用其条款，原游戏数据、LEGO 商标以及安装器取自原安装程序的位图仍有各自权利约束。所审来源未确立 AI 或 REA 使用归因。"
+    ]
   }
 }
