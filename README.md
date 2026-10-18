@@ -15,7 +15,7 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
 - [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
 
 **Research and workflows**
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (58) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -290,6 +290,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Builds a modern Diablo and Hellfire port on the Devilution reconstruction, with platform support, bug fixes and optional quality-of-life features. The project documents the original symbol-assisted reconstruction and includes selected dungeon-generation and saved-game regression checks.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/devilutionx-case/)
+
+- [**TicTacToe-AI: a bounded REA-fork reconstruction of one game method**](https://github.com/heaven-hm/re-agent/tree/develop/benchmarks/tictactoe)
+
+  The author’s REA fork, posted as rea-engine and since renamed RE-Agent, decompiles the shipped .NET executable of the GPL-licensed TicTacToe-AI game, recompiles the recovered C# and resources, and repairs one decompiler error against the original IL. A differential probe runs original and rebuilt code on all 19,683 board assignments for one status method and compares six form renders. The report passes only that method; the whole game remains partial.
+
+  Case study · Mixed workflow · [Requirements & evidence](https://awesomerea.org/resources/rea-engine-tictactoe-case/)
 
 - [**LASRecomp: Link’s Awakening static recompilation**](https://github.com/peiikai/LASRecomp)
 

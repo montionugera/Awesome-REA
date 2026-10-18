@@ -15,7 +15,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -291,6 +291,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   基于 Devilution 重建成果提供现代平台上的 Diablo 与 Hellfire 移植，加入平台支持、错误修复及可选便利功能。项目记录了早期借助符号信息的重建过程，并包含特定地牢生成与存档回归检查。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/devilutionx-case/)
+
+- [**TicTacToe-AI：REA 分叉对单个游戏方法的有限重建**](https://github.com/heaven-hm/re-agent/tree/develop/benchmarks/tictactoe)
+
+  作者的 REA 分叉（发帖时名为 rea-engine，后更名为 RE-Agent）反编译 GPL 许可的 TicTacToe-AI 游戏所发布的 .NET 可执行文件，重新编译恢复出的 C# 与资源，并依据原始 IL 修复一处反编译错误。差分探针在一个状态判定方法的全部 19,683 种棋盘赋值上运行原版与重建代码，并比较六张窗体渲染图。报告只判定该方法通过，整个游戏仍属部分重建。
+
+  案例 · 混合工具流程 · [使用条件与证据](https://awesomerea.org/zh/resources/rea-engine-tictactoe-case/)
 
 - [**LASRecomp：《织梦岛》静态重编译案例**](https://github.com/peiikai/LASRecomp)
 
