@@ -15,7 +15,7 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
 - [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
 
 **Research and workflows**
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (58) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -308,6 +308,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Reconstructs Perfect Dark’s Nintendo 64 code with a documented matching-ROM build. The project combines reconstructed source with assets from a user-supplied original ROM, then checks version-specific artifact hashes. It is a reproducible-build research case, distinct from the separate native PC port; matching results remain project-reported here.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/perfect-dark-matching-decomp-case/)
+
+- [**Sly Cooper and the Thievius Raccoonus: matching PlayStation 2 decompilation**](https://github.com/TheOnlyZac/sly1)
+
+  Reconstructs source code for SCUS\_971.98, the NTSC-U PlayStation 2 executable of Sly Cooper and the Thievius Raccoonus, as a work-in-progress matching decompilation. Functions not yet matched are still assembled from code split out of the user's own executable, and the build checks the linked ELF's SHA-1. The result runs in PCSX2 with the original disc for assets; it is not a native PC port.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/sly1-matching-decomp-case/)
 
 #### Tools, projects and integrations
 
