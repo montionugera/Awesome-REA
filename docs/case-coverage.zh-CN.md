@@ -96,6 +96,7 @@
 | 🚀 Metroid Prime — AxioDL/metaforce | 待核查 | [来源](https://github.com/AxioDL/metaforce/blob/de8fc69bd7f345d6cf5f0c8fc2798295e22522d3/README.md) |
 | 🦔 Sonic Mania — RSDKModding/Sonic-Mania-Decompilation | 待核查 | [来源](https://github.com/RSDKModding/Sonic-Mania-Decompilation/blob/9dc699428420d752af9767bdb13f585ee0881bc0/README.md) |
 | Unleashed Recompiled：转换 Xbox 360 游戏代码与着色器 | 已收录 | [来源](https://github.com/hedge-dev/UnleashedRecomp/blob/cf829a9eca8fb680fba4b0409ddeb6ca92f22e3c/README.md) |
+| Ratchet & Clank：记录了代理流程的 PS2 一致性反编译 | 已收录 | [来源](https://github.com/OpenRAC/rac1-decomp/blob/7f5d3ff56701b611ac0e2c2589ef1f49cf8ac8fe/README.md) |
 | OpenGOAL：恢复 GOAL 代码并重建 Jak 系列游戏 | 已收录 | [来源](https://github.com/open-goal/jak-project/blob/32c3cf73970f885c0a588623208232db72a74a58/README.md) |
 | LEGO Island：源码重建与单独记录的精确重构建 | 已收录 | [来源](https://github.com/isledecomp/isle/blob/8119bd013645972c72480e4de21529f1e91ce5c7/README.md) |
 | ⚡ Pokémon FireRed — pret/pokefirered | 待核查 | [来源](https://github.com/pret/pokefirered/blob/037335f4c725d7c9aecdac87066f2002b4bd7e14/README.md) |
