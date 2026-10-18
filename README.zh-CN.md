@@ -15,7 +15,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -309,6 +309,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**D2R Mobile：在 Apple 设备上重新托管 Diablo II: Resurrected 的 Switch 程序**](https://github.com/jhaizhou-ops/d2r-mobile)
+
+  在 iPhone、iPad 和 Apple 芯片 Mac 上原生运行 Nintendo Switch 版自身的 aarch64 程序，仅改写依赖 Horizon 内核的指令，并以 Metal 提供其系统服务与 NVN 图形 API。着色器由使用者自有文件离线转译，项目另行加入触控界面与终局玩法。这是重新托管的兼容层，不是反编译或重编译出的源码。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/d2r-mobile-switch-rehost-case/)
 
 #### 工具、项目与集成
 

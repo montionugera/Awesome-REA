@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "d2r-mobile-switch-rehost-case": {
+    "name": "D2R Mobile：在 Apple 设备上重新托管 Diablo II: Resurrected 的 Switch 程序",
+    "requirements": [
+      "仅支持带 Reign of the Warlock 资料片、版本 1.0.34.0（对应 PC 3.3.94012）的 Switch 版；其他版本会被改写规则拦下。README 报告支持 A14／M1 及以上的 iPhone／iPad 构建（iOS 26，或经旧版 API 构建支持 iOS 18–25）以及原生 Apple 芯片 Mac 构建；A16 及更早设备需额外纹理包，Apple TV 为社区开发者预览版，Intel Mac、A13 及更早芯片和联机均不支持。",
+      "需自备该版本的 Switch 程序文件（ExeFS 中的 main、sdk、subsdk0）及 RomFS 更新数据；改写后的程序、转译后的着色器和设备端资源文件夹均据此在本地生成。仓库不含游戏代码、美术、文本或着色器，但记录了着色器接口表、图形 API 名称及约 800 个主程序地址，并在 docs/DERIVED.md 中逐项列明。",
+      "主要途径是在装有 Xcode 的 Apple 芯片 Mac 上完整构建，需 setup.sh 准备的 Python 环境及 Apple 签名账户；无 Xcode 途径在 Windows 上为预构建外壳打包，Linux 打包及侧载工具签名报告尚未验证。着色器转译内置 Ryujinx 的转译器，并由 SPIRV-Cross 生成 Metal 源码。",
+      "dm/verify 记录了对每个改写位置的结构检查和基于 Unicorn 的等价测试（只需使用者自有文件）以及单元测试。存档、逐 tick 状态和截图关卡与修补版 Ryujinx 录制的基准数据比对；这些录制及驱动脚本不随仓库提供，因此无法仅凭仓库重跑这些关卡。README 报告 44 台设备的封闭测试及注明日期的 iPhone 17 Pro Max 实测；本合集未运行上述任何检查。",
+      "项目声明采用 MIT；内置第三方代码保留各自许可（Ryujinx 转译器为 MIT，源自 deko3d 的代码为 zlib，FLIP 为 BSD 3-Clause）。七条离线运行改写取自作者与许可均不明的社区补丁。Blizzard 与 Nintendo 对游戏的权利不受影响；所审来源未确立 AI 或 REA 使用归因。"
+    ]
   }
 }
