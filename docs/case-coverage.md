@@ -23,12 +23,12 @@ Repository counts use normalized GitHub repository, tree and file links within e
 | State | Occurrences | Inventory units | Meaning |
 | --- | ---: | ---: | --- |
 | Already curated (`already-curated`) | 64 | 63 | Full-scope identity mapping to a catalog resource or paper; not independent runtime reproduction. |
-| Pending (`pending`) | 461 | 460 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
-| Insufficient evidence (`insufficient-evidence`) | 66 | 66 | An idea, request or unsupported reconstruction claim is retained as a lead. |
+| Pending (`pending`) | 455 | 454 | Primary review or complete catalog coverage remains pending; partial matches stay here. |
+| Insufficient evidence (`insufficient-evidence`) | 72 | 72 | An idea, request or unsupported reconstruction claim is retained as a lead. |
 
 71 occurrences have catalog links. They reference 62 distinct resource IDs and 1 paper ID. Match scope is recorded separately; do not add these populations as unique projects.
 
-This ledger records a new primary-source review for 75 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
+This ledger records a new primary-source review for 81 inventory units. Other catalog-linked entries inherit the catalog’s separate source-review record; a link does not mean the entire collection report was reviewed again. No runtime experiment was independently reproduced for this ledger.
 
 Repository README scan IDs and counts are deliberately absent. A successful README fetch, an upstream list entry and a source-reviewed case are different facts.
 
@@ -55,7 +55,13 @@ Repository README scan IDs and counts are deliberately absent. A successful READ
 | Browserbase plugin: re-hosting Claude in Chrome’s browser bridge | Already curated | [Source](https://github.com/browserbase/claude-code-plugin/blob/b399af34a1b1cc365d1e1c0089823c4fa5e10ea5/forwarding-server.js) |
 | pi-computer-use: desktop interaction for other models | Insufficient evidence | [Source](https://github.com/injaneity/pi-computer-use/blob/67e9e2f77643f84605b738a3198048a88e92190e/README.md) |
 | Background Computer Use in Swift | Insufficient evidence | [Source](https://github.com/actuallyepic/background-computer-use/blob/52116acfe0f2f57174f5e0166881abe944cb6eeb/README.md) |
+| Boba Fett in Red Dead Redemption 2 | Insufficient evidence | [Source](https://x.com/ChrisGPT/status/2106925689190354989) |
+| Apple Notes migration to Grape | Insufficient evidence | [Source](https://x.com/ozgrozer/status/2035124755854979272) |
 | GameCube/Wii PowerPC support request | Insufficient evidence | [Source](https://github.com/morluto/rea/issues/1741) |
+| Gamepad settings after Bluetooth analysis | Insufficient evidence | [Source](https://x.com/corndogjpn2/status/2109289076243525916) |
+| ASUS ACPI and Linux GPU support | Insufficient evidence | [Source](https://x.com/200Tabs1Brain/status/2108983700776186112) |
+| Poker table organizer | Insufficient evidence | [Source](https://x.com/lipinhobeats/status/2109435654962655526) |
+| Aerobiz 2: REA and Kimi decompilation | Insufficient evidence | [Source](https://x.com/TSFisher24nrex/status/2109452544913326086) |
 | CF632BLE: a local client from scale-protocol research | Already curated | [Source](https://github.com/guyru/cf632ble/blob/c029ef5cfefbd323ffe2a194a75db5cc47aa6d5c/README.md) |
 | Netflix/Prime: a reported unified streaming interface | Insufficient evidence | [Source](https://x.com/HigbeyMyrta/status/2109596534350524664) |
 | fowlbrowser: an existing-session browser bridge for agents | Insufficient evidence | [Source](https://github.com/argofowl/FowlBrowser/blob/18f7519fa27289885c95b67eff714401ffff51f0/README.md) |
