@@ -15,7 +15,7 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
 - [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
 
 **Research and workflows**
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (58) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -308,6 +308,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Reconstructs Perfect Dark’s Nintendo 64 code with a documented matching-ROM build. The project combines reconstructed source with assets from a user-supplied original ROM, then checks version-specific artifact hashes. It is a reproducible-build research case, distinct from the separate native PC port; matching results remain project-reported here.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/perfect-dark-matching-decomp-case/)
+
+- [**ico-pc: a native ICO port compiled from the PS2 decompilation**](https://github.com/nathanialf/ico-pc)
+
+  Compiles the decompiled C of the PlayStation 2 game ICO natively for Windows, Linux, Android, iPhone and Apple-silicon Macs, with host code standing in for the PS2 hardware and Sony libraries. No PS2 code is interpreted or recompiled, and the program reads the player's PAL disc image on first start. It is a native port of a separately byte-matched decompilation, with documented divergences and optional enhancements.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/ico-pc-port-case/)
 
 #### Tools, projects and integrations
 

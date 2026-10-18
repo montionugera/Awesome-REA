@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "ico-pc-port-case": {
+    "name": "ico-pc：由 PS2 反编译源码编译而成的《ICO》原生移植",
+    "requirements": [
+      "README 将其描述为 PAL 版 PS2 发行版（SCES-50760）的移植。架构文档称，ico2/ 下的游戏反编译 C 源码为宿主平台编译，port/ 则替代 EE 内核、GS／VU1 渲染、SPU2 音频、光盘、手柄和记忆卡服务。其平台表（审阅时最新发布为 v0.7.10）列出 64 位 Windows 10／11、x86-64 及 arm64 Linux、Steam Deck、Android 10+、通过 LiveContainer 运行的 iPhone，以及 macOS 12+ 的 Apple 芯片 Mac；维护者称未测试 iPhone 和 Mac 版本。",
+      "需玩家自备 PAL 版《ICO》光盘镜像（SCES-50760），格式为 .iso、.chd 或 .bin/.cue；不支持其他地区和版本。构建无需光盘镜像，但首次运行会将约 1 GB 的游戏文件复制到 ico.o2r 归档，并从中加载数据表。法律说明规定，仓库和下载包不含光盘数据、启动 ELF、素材或数据表。",
+      "构建使用 CMake 预设和 Ninja。Linux 快速入门面向 Debian 13 或 Ubuntu 24.04，需 gcc 14（gcc 13 亦可构建）、Python 3，以及一个下载约 1.6 GB 固定版本工具链和依赖的脚本，其中包括 llvm-mingw、mingw-w64 gcc、SDL3、Vulkan 组件和 DXC。渲染使用 Vulkan、Windows 上的 Direct3D 12，或 Apple 平台上的 MoltenVK。",
+      "CI 运行代码规范与审计检查，在 x86-64 和 arm64 Linux 上构建并运行 ctest，交叉构建 Windows 版本，并打包 Android、iPhone 和 macOS 版本；缺少玩家光盘镜像时，依赖光盘的测试会跳过。差异列表记录了与 PS2 的已知差别，并说明没有任何测试将运行结果与 PS2 比较。上游反编译项目另行报告其 PAL 版和日版启动 ELF 逐字节一致，但大部分只读数据仍取自光盘；本合集未构建或运行这两个项目。",
+      "README 和 LICENSE 规定 MIT 仅适用于项目自身的代码、脚本和文档，不授予游戏、其数据或 Sony 及 Team Ico 商标的任何权利；第三方代码另行列出。LICENSE 声明称构建需要光盘镜像，与构建指南不一致。所审来源未确立 AI 或 REA 使用归因。"
+    ]
   }
 }
