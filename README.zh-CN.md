@@ -15,8 +15,8 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
-- [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
+- [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (13) · [协议](#protocol) (11)
 
 **论文与工作流**
 
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (59) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -309,6 +309,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**Firefighter：将反编译的 DOS 游戏移植为 Rust**](https://gitlab.com/esr/firefighter)
+
+  Eric S. Raymond 将 Eben Sprinsock 于 1985 年发布的 DOS 共享软件游戏 Firefighter 移植为终端游戏。项目历史记载，ChatGPT 5.5 先将 DOS 二进制反编译为 Borland Pascal，再译为 Rust；之后 Raymond 改进了界面，并修正一处计分不符。玩法未变是作者的说法；中间 Pascal 代码及任何对照运行均未公开。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/firefighter-rust-port-case/)
 
 #### 工具、项目与集成
 
@@ -822,6 +828,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   从 Intel Windows 驱动包中恢复选定的相机调校结构，用于修复一个 ThinkPad 型号在 Linux 下的图像采集。公开的 CPFF／AIQB 解析器、内核补丁及 libcamera 修改，配有作者报告的 Claude 辅助调查和有限范围的前后测量。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/thinkpad-imx471-camera-case/)
+
+- [**flipper-telink：Tuya Zigbee 遥控器的替换固件**](https://github.com/ngxson/flipper-telink)
+
+  一款 Flipper Zero 应用，以位操作驱动 Telink 的 SWire 调试接口，用于转储并重刷 TLSR825x Zigbee 设备；仓库还附有对转储固件的静态分析笔记，以及为其中两款设备全新编写的固件。针对 Tuya TS0044/TS0046 场景遥控器，笔记将原厂约 500 ms 的单击延迟追溯到双击判定窗口；替换固件取消该窗口，同时向 Zigbee2MQTT 呈现原厂型号标识。最新 Zigbee 版本的配对、动作及电量上报被标注为尚未验证。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/flipper-telink-tuya-remote-firmware-case/)
 
 #### 工具、项目与集成
 

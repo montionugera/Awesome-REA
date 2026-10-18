@@ -15,8 +15,8 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
-- [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
+- [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (13) · [Protocol](#protocol) (11)
 
 **Research and workflows**
 
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (59) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -308,6 +308,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Reconstructs Perfect Dark’s Nintendo 64 code with a documented matching-ROM build. The project combines reconstructed source with assets from a user-supplied original ROM, then checks version-specific artifact hashes. It is a reproducible-build research case, distinct from the separate native PC port; matching results remain project-reported here.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/perfect-dark-matching-decomp-case/)
+
+- [**Firefighter: a decompiled DOS game ported to Rust**](https://gitlab.com/esr/firefighter)
+
+  Eric S. Raymond’s terminal port of Firefighter, Eben Sprinsock’s 1985 DOS shareware game. The project history says ChatGPT 5.5 decompiled the DOS binary to Borland Pascal and translated it to Rust, after which Raymond modernized the interface and corrected a scoring mismatch. Unchanged gameplay is the author’s statement; the intermediate Pascal and any comparison runs are not published.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/firefighter-rust-port-case/)
 
 #### Tools, projects and integrations
 
@@ -821,6 +827,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Recovers selected camera-tuning structures from an Intel Windows driver package and uses them to repair Linux image capture on one ThinkPad model. Public CPFF/AIQB parsers, kernel patches and libcamera changes accompany the author’s Claude-assisted investigation and bounded before/after measurements.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/thinkpad-imx471-camera-case/)
+
+- [**flipper-telink: replacement firmware for Tuya Zigbee remotes**](https://github.com/ngxson/flipper-telink)
+
+  A Flipper Zero app that bit-bangs Telink’s SWire debug interface to dump and reflash TLSR825x Zigbee devices, with static-analysis notes on the dumps and freshly written firmware for two of them. For Tuya TS0044/TS0046 scene remotes, the notes trace the stock \~500 ms single-click delay to a double-click window; the replacement firmware drops that window while presenting the stock model IDs to Zigbee2MQTT. The latest Zigbee build is marked unverified for pairing, actions and battery reporting.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/flipper-telink-tuya-remote-firmware-case/)
 
 #### Tools, projects and integrations
 
