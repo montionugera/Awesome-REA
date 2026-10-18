@@ -15,7 +15,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -309,6 +309,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**Melee Unlocked：Melee 的 Windows 源码移植与静态重编译**](https://github.com/Hero88go/melee-unlocked)
+
+  Super Smash Bros. Melee（NTSC 1.02）的 Windows 测试版构建，包含两套引擎：源码移植将 doldecomp 反编译编译为原生库，静态重编译则将零售版 DOL 的 PowerPC 代码及 Slippi 的 Gecko 代码转换为 C++。两者都运行在原生运行时上，提供 Direct3D 渲染、解锁的显示帧率和原生实现的 Slippi 回滚对战。全部游戏数据来自使用者自备的 ISO，README 称开发借助了 AI。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/melee-unlocked-case/)
 
 #### 工具、项目与集成
 
