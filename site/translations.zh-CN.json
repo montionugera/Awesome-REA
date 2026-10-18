@@ -1472,5 +1472,14 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "crash-bandicoot-c1-port-case": {
+    "name": "c1：PlayStation 版《古惑狼》的 C 语言移植",
+    "requirements": [
+      "README 称代码已 100% 移植，但功能完成度为 78%。已记录的问题包括多个关卡崩溃、镜头与碰撞行为不正确、演示模式和标题状态失效，以及开启编译器优化后行为改变；PlayStation（Psy-Q）构建无法使用。",
+      "运行时需要用户自有《古惑狼》光盘中的 NSD／NSF 素材文件；仓库不附带游戏数据，README 也未注明支持的光盘地区或版本。游戏默认进入标题流程，若要更改需修改常量并重新编译。",
+      "仅支持 32 位 x86 可执行文件，需使用 GNU Make 和 32 位 GNU 工具链（64 位宿主上为 multilib GCC／G++），并依赖 OpenGL 2.0+、SDL2 和 FluidSynth（已内置 cimgui）。编译仅在 Ubuntu／Debian 上测试过；没有发布版本，审阅时最后一次提交为 2024-01-22。",
+      "项目未公布字节一致、等价性或自动化游戏流程检查，本合集也未复现其进度数字。仓库没有许可证文件，复用权利未明确，原游戏保留各自权利；所审来源未记录 REA 或 AI 参与。"
+    ]
   }
 }
