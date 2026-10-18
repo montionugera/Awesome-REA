@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "medievil-recomp-case": {
+    "name": "MediEvil Recomp：PlayStation 游戏静态重编译为 C#",
+    "requirements": [
+      "所审版本针对北美版 PlayStation 发行版（SCUS-942.27）；config/MediEvil.json 列出供 RecompOne 转译的主程序及其覆盖模块。README 称其为公开测试版，功能必然会出现故障，稳定的 1.0 版尚未发布。v0.2b 更新日志以原生浮点渲染补丁取代 PGXP 渲染器，并加入宽屏修正和自动更新。",
+      "需合法拥有的北美版 MediEvil 光盘，格式为 bin/cue 或 CHD；README 和 disc/README.md 列明 disc/ 目录中应放置的两个音轨 .bin 文件及 .cue 文件。项目不提供游戏文件。RecompOne 称其运行时只需游戏文件，不需要 BIOS 或其他 Sony 文件。",
+      "构建需要 Git、固定版本的 RecompOne 与 ShaderMod 子模块，以及 .NET 10 SDK。通过 Windows 批处理脚本，或手动以 config/MediEvil.json 运行 RecompOne，生成游戏代码，再将其编译为 .NET 10 应用。运行需 .NET 10 运行时、OpenAL 及支持 OpenGL 2.1 的 GPU；v0.2b 发布包涵盖 Windows x64／arm64、macOS x64／arm64 和 Linux x64。",
+      "构建工作流使用另一个访问受限仓库中的光盘输入完成重编译和编译，然后上传构建产物；它不运行游戏，也不与原版行为比较。README 致谢一个未具名的反编译项目，其成果用作函数命名和补丁参考。本合集未构建或运行该项目。",
+      "所审版本的 MediEvilRecomp 没有许可证文件，复用条款未作说明；RecompOne 子模块声明采用 MIT。原游戏内容，包括重编译器所转译的可执行代码，仍有各自权利约束。两份 README 均称编写代码时未使用 AI，并拒绝 AI 生成的贡献；这不是 REA 辅助案例。"
+    ]
   }
 }
