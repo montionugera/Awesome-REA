@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "medievil-decomp-case": {
+    "name": "MediEvil 反编译：早期阶段、以校验值把关的 PlayStation 项目",
+    "requirements": [
+      "README 将其描述为针对美版 PlayStation《MediEvil》初代、仍在进行中的反编译项目，MediEvil 2 留待以后。Makefile 的目标为 SCUS_942.27、MEDIEVIL.EXE 及 26 个覆盖模块二进制文件。在所审版本中，大部分函数仍通过 INCLUDE_ASM 以拆分出的汇编形式纳入，而非以 C 编写；README 的进度部分仅为占位，固定的提交日期为 2026-02-23。",
+      "需将使用者自有美版 MediEvil 光盘中的文件放入 disk/；splat 配置要求 SCUS_942.27 具有固定的 SHA-1，make extract 从这些文件拆分出各可执行文件和覆盖模块。仓库不提供任何游戏文件。",
+      "构建需类 Linux 宿主环境：GNU make、mipsel-linux-gnu binutils、安装所列软件包（如 spimdisasm、rabbitizer）的 Python 3，以及 splat、m2c、maspsx 和 asm-differ 子模块。C 文件经由仓库内置的 PlayStation GCC 2.8.1 cc1 二进制文件和 maspsx 处理。README 让贡献者参阅 wiki 页面，了解环境配置、变基工作流和反编译流程。",
+      "make all 构建全部二进制文件，并依据 config/medievil.check.sha 运行 sha1sum；CI 使用访问受限仓库中的光盘文件执行拆分和该检查。检查通过只说明汇编产物与这些校验值一致，并不表示已有多少代码反编译为 C，也不表示测试过游戏行为。本合集未构建或运行该项目。",
+      "仓库声明采用 MIT；原游戏内容、内置的编译器二进制文件以及仓库中的 PSY-Q 头文件和数据仍适用各自条款。所审来源未确立 AI 或 REA 使用归因，该项目也独立于 MediEvil Recomp 静态重编译项目。"
+    ]
   }
 }
