@@ -209,15 +209,22 @@ def render_catalog(records, language, paper_urls=frozenset()):
         lines.extend([f'<a id="{section}"></a>', f'### {section_heading(section, language)}', '', contents, ''])
         cases = [record for record in groups[section] if record['kind'] == 'case-study']
         tools = [record for record in groups[section] if record['kind'] != 'case-study']
-        subgroups = [(None, groups[section])]
+        subgroups = [(None, None, groups[section])]
         if cases and tools:
+            # Explicit anchors keep the jump links stable whatever the heading text and count say.
             subgroups = [
-                (('Case studies', '案例')[index], cases),
-                (('Tools, projects and integrations', '工具、项目与集成')[index], tools),
+                (f'{section}-cases', ('Case studies', '案例')[index], cases),
+                (f'{section}-tools', ('Tools, projects and integrations', '工具、项目与集成')[index], tools),
             ]
-        for label, entries in subgroups:
+            if language == 'zh':
+                jumps = [f'{len(cases)} 个案例', f'{len(tools)} 个工具、项目与集成']
+            else:
+                jumps = [f"{len(cases)} case {'study' if len(cases) == 1 else 'studies'}",
+                         f'{len(tools)} tools, projects and integrations']
+            lines.extend([' · '.join(f'[{text}](#{anchor})' for text, (anchor, _, _) in zip(jumps, subgroups)), ''])
+        for anchor, label, entries in subgroups:
             if label:
-                lines.extend([f'#### {label}', ''])
+                lines.extend([f'<a id="{anchor}"></a>', f'#### {label} ({len(entries)})', ''])
             for record in entries:
                 name = plain_text((record.get('name_zh') or translations.get(record['id'], {}).get('name') or record['name']) if language == 'zh' else record['name'])
                 description = plain_text(record[f'description_{language}'])

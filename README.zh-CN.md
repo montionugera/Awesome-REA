@@ -61,7 +61,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[4 个案例](#website-cases) · [13 个工具、项目与集成](#website-tools)
+
+<a id="website-cases"></a>
+#### 案例 (4)
 
 - [**恐龙跑酷：恢复一条加速规则**](https://github.com/morluto/rea/blob/c360cfcd6d7901514b16dd6113eba2e0b0fdf422/website/evidence/calculator-and-dino.md#dinosaur-speed)
 
@@ -87,7 +90,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/baocut-design-canvas-case/)
 
-#### 工具、项目与集成
+<a id="website-tools"></a>
+#### 工具、项目与集成 (13)
 
 - [**webcrack**](https://github.com/j4k0xb/webcrack)
 
@@ -172,7 +176,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[49 个案例](#game-cases) · [18 个工具、项目与集成](#game-tools)
+
+<a id="game-cases"></a>
+#### 案例 (49)
 
 - [**DX-Ball：重建声音声像计算**](https://rea.tools/showcase/dx-ball/)
 
@@ -468,7 +475,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/sotn-matching-decomp-case/)
 
-#### 工具、项目与集成
+<a id="game-tools"></a>
+#### 工具、项目与集成 (18)
 
 - [**RenderDoc**](https://github.com/baldurk/renderdoc)
 
@@ -583,7 +591,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[24 个案例](#app-cases) · [20 个工具、项目与集成](#app-tools)
+
+<a id="app-cases"></a>
+#### 案例 (24)
 
 - [**Aegis：追踪登录验证码计算**](https://rea.tools/showcase/aegis/)
 
@@ -729,7 +740,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/wine-uwp-store-apps-case/)
 
-#### 工具、项目与集成
+<a id="app-tools"></a>
+#### 工具、项目与集成 (20)
 
 - [**JADX-AI-MCP**](https://github.com/zinja-coder/jadx-ai-mcp)
 
@@ -856,7 +868,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[1 个案例](#native-binary-cases) · [19 个工具、项目与集成](#native-binary-tools)
+
+<a id="native-binary-cases"></a>
+#### 案例 (1)
 
 - [**DownUnderCTF：masked-squares 校验器**](https://rea.tools/showcase/ctf/)
 
@@ -864,7 +879,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · REA · [使用条件与证据](https://awesomerea.org/zh/resources/rea-ctf-case/)
 
-#### 工具、项目与集成
+<a id="native-binary-tools"></a>
+#### 工具、项目与集成 (19)
 
 - [**Ghidra**](https://github.com/NationalSecurityAgency/ghidra)
 
@@ -985,7 +1001,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[1 个案例](#firmware-cases) · [11 个工具、项目与集成](#firmware-tools)
+
+<a id="firmware-cases"></a>
+#### 案例 (1)
 
 - [**ThinkPad IMX471：为 Linux 恢复相机调校信息**](https://github.com/cschalle/mipi-fixes-x1-aura)
 
@@ -993,7 +1012,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/thinkpad-imx471-camera-case/)
 
-#### 工具、项目与集成
+<a id="firmware-tools"></a>
+#### 工具、项目与集成 (11)
 
 - [**Binwalk**](https://github.com/ReFirmLabs/binwalk)
 
@@ -1066,7 +1086,10 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
 [↑ 返回目录](#目录)
 
-#### 案例
+[5 个案例](#protocol-cases) · [6 个工具、项目与集成](#protocol-tools)
+
+<a id="protocol-cases"></a>
+#### 案例 (5)
 
 - [**open-appleremote：Siri Remote 协议重建**](https://github.com/a-funk/open-appleremote)
 
@@ -1098,7 +1121,8 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/hw-harness-reference-case/)
 
-#### 工具、项目与集成
+<a id="protocol-tools"></a>
+#### 工具、项目与集成 (6)
 
 - [**Wireshark 协议分析工具**](https://gitlab.com/wireshark/wireshark)
 

@@ -8,8 +8,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from build_readme import (BADGES_BEGIN, BADGES_END, CONTENTS_BEGIN, CONTENTS_END, plain_text,
-                         render_badges, replace_badges, render_catalog, render_contents, render_papers)
+from build_readme import (BADGES_BEGIN, BADGES_END, BEGIN, CONTENTS_BEGIN, CONTENTS_END, END, plain_text,
+                         render_badges, replace_badges, render_catalog, render_contents, render_papers,
+                         replace_catalog)
 
 
 def resource(**changes):
@@ -125,6 +126,53 @@ class ReadmeContentsTest(unittest.TestCase):
                 self.assertIn(plain_text(record['venue']), rendered)
         self.assertEqual(record, before)
 
+
+    def test_split_sections_count_subheadings_and_link_them_from_a_jump_line(self):
+        records = [
+            resource(),
+            resource(id='second-web-tool', url='https://example.com/second'),
+            resource(id='web-case', kind='case-study', url='https://example.com/case'),
+        ]
+        for language, jump, case_heading, tool_heading in [
+            ('en', '[1 case study](#website-cases) · [2 tools, projects and integrations](#website-tools)',
+             '#### Case studies (1)', '#### Tools, projects and integrations (2)'),
+            ('zh', '[1 个案例](#website-cases) · [2 个工具、项目与集成](#website-tools)',
+             '#### 案例 (1)', '#### 工具、项目与集成 (2)'),
+        ]:
+            with self.subTest(language=language):
+                rendered = render_catalog(records, language)
+                self.assertIn('\n\n' + jump + '\n\n', rendered)
+                self.assertIn(f'<a id="website-cases"></a>\n{case_heading}\n', rendered)
+                self.assertIn(f'<a id="website-tools"></a>\n{tool_heading}\n', rendered)
+                self.assertIn('<a id="website"></a>\n### Website', rendered)
+                # A single-kind section keeps no sub-headings and no jump line.
+                single = render_catalog(records[:2], language)
+                self.assertNotIn('####', single)
+                self.assertNotIn('#website-', single)
+        self.assertIn('[2 case studies](#website-cases)',
+                      render_catalog(records + [resource(id='c2', kind='case-study', url='https://example.com/c2')], 'en'))
+
+    def test_stale_subheading_count_is_replaced(self):
+        records = [resource(), resource(id='web-case', kind='case-study', url='https://example.com/case')]
+        rendered = render_catalog(records, 'en')
+        current = BEGIN + '\n' + rendered + END
+        self.assertEqual(replace_catalog(current, rendered), current)
+        stale = current.replace('#### Case studies (1)', '#### Case studies (2)')
+        self.assertNotEqual(stale, current)
+        self.assertEqual(replace_catalog(stale, rendered), current)
+
+    def test_readme_subheading_counts_match_entries_beneath_them(self):
+        for name in ('README.md', 'README.zh-CN.md'):
+            text = (ROOT / name).read_text(encoding='utf-8')
+            catalog = text.split(BEGIN, 1)[1].split(END, 1)[0]
+            blocks = re.split(r'^(?=#{3,4} )', catalog, flags=re.MULTILINE)
+            counted = [block for block in blocks if block.startswith('#### ')]
+            self.assertGreater(len(counted), 0)
+            for block in counted:
+                heading = block.splitlines()[0]
+                with self.subTest(readme=name, heading=heading):
+                    count = int(re.search(r'\((\d+)\)$', heading)[1])
+                    self.assertEqual(len(re.findall(r'^- \[\*\*', block, re.MULTILINE)), count)
 
     def test_contents_labels_match_the_headings_they_link(self):
         for name, language in (('README.md', 'en'), ('README.zh-CN.md', 'zh')):

@@ -60,7 +60,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[4 case studies](#website-cases) · [13 tools, projects and integrations](#website-tools)
+
+<a id="website-cases"></a>
+#### Case studies (4)
 
 - [**Dinosaur runner: recovering one acceleration rule**](https://github.com/morluto/rea/blob/c360cfcd6d7901514b16dd6113eba2e0b0fdf422/website/evidence/calculator-and-dino.md#dinosaur-speed)
 
@@ -86,7 +89,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/baocut-design-canvas-case/)
 
-#### Tools, projects and integrations
+<a id="website-tools"></a>
+#### Tools, projects and integrations (13)
 
 - [**webcrack**](https://github.com/j4k0xb/webcrack)
 
@@ -171,7 +175,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[49 case studies](#game-cases) · [18 tools, projects and integrations](#game-tools)
+
+<a id="game-cases"></a>
+#### Case studies (49)
 
 - [**DX-Ball: reconstruct sound panning**](https://rea.tools/showcase/dx-ball/)
 
@@ -467,7 +474,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/sotn-matching-decomp-case/)
 
-#### Tools, projects and integrations
+<a id="game-tools"></a>
+#### Tools, projects and integrations (18)
 
 - [**RenderDoc**](https://github.com/baldurk/renderdoc)
 
@@ -582,7 +590,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[24 case studies](#app-cases) · [20 tools, projects and integrations](#app-tools)
+
+<a id="app-cases"></a>
+#### Case studies (24)
 
 - [**Aegis: trace a login-code calculation**](https://rea.tools/showcase/aegis/)
 
@@ -728,7 +739,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/wine-uwp-store-apps-case/)
 
-#### Tools, projects and integrations
+<a id="app-tools"></a>
+#### Tools, projects and integrations (20)
 
 - [**JADX-AI-MCP**](https://github.com/zinja-coder/jadx-ai-mcp)
 
@@ -855,7 +867,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[1 case study](#native-binary-cases) · [19 tools, projects and integrations](#native-binary-tools)
+
+<a id="native-binary-cases"></a>
+#### Case studies (1)
 
 - [**DownUnderCTF: masked-squares flag checker**](https://rea.tools/showcase/ctf/)
 
@@ -863,7 +878,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · REA · [Requirements & evidence](https://awesomerea.org/resources/rea-ctf-case/)
 
-#### Tools, projects and integrations
+<a id="native-binary-tools"></a>
+#### Tools, projects and integrations (19)
 
 - [**Ghidra**](https://github.com/NationalSecurityAgency/ghidra)
 
@@ -984,7 +1000,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[1 case study](#firmware-cases) · [11 tools, projects and integrations](#firmware-tools)
+
+<a id="firmware-cases"></a>
+#### Case studies (1)
 
 - [**ThinkPad IMX471: recovering camera tuning for Linux**](https://github.com/cschalle/mipi-fixes-x1-aura)
 
@@ -992,7 +1011,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/thinkpad-imx471-camera-case/)
 
-#### Tools, projects and integrations
+<a id="firmware-tools"></a>
+#### Tools, projects and integrations (11)
 
 - [**Binwalk**](https://github.com/ReFirmLabs/binwalk)
 
@@ -1065,7 +1085,10 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
 [↑ Contents](#contents)
 
-#### Case studies
+[5 case studies](#protocol-cases) · [6 tools, projects and integrations](#protocol-tools)
+
+<a id="protocol-cases"></a>
+#### Case studies (5)
 
 - [**open-appleremote: Siri Remote protocol reconstruction**](https://github.com/a-funk/open-appleremote)
 
@@ -1097,7 +1120,8 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/hw-harness-reference-case/)
 
-#### Tools, projects and integrations
+<a id="protocol-tools"></a>
+#### Tools, projects and integrations (6)
 
 - [**Wireshark**](https://gitlab.com/wireshark/wireshark)
 
