@@ -15,7 +15,7 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
 - [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
 
 **Research and workflows**
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (58) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -308,6 +308,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Reconstructs Perfect Dark’s Nintendo 64 code with a documented matching-ROM build. The project combines reconstructed source with assets from a user-supplied original ROM, then checks version-specific artifact hashes. It is a reproducible-build research case, distinct from the separate native PC port; matching results remain project-reported here.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/perfect-dark-matching-decomp-case/)
+
+- [**SymphonyRecomp: a RecompOne static recompilation of Symphony of the Night**](https://github.com/BlackLabelHQ/SymphonyRecomp)
+
+  Statically recompiles the North American PlayStation release of Castlevania: Symphony of the Night into C# with BlackLabelHQ’s RecompOne, whose runtime simulates the BIOS, memory-mapped I/O, GPU and CD-ROM so the game runs natively without a console BIOS. Per-overlay function maps and patches add widescreen, quality-of-life, randomizer and cheat features. References from the SOTN decompilation help name functions, but the project stresses that it is a recompilation, not a decompilation.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/symphonyrecomp-case/)
 
 #### Tools, projects and integrations
 

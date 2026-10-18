@@ -15,7 +15,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -309,6 +309,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**SymphonyRecomp：用 RecompOne 静态重编译《恶魔城：月下夜想曲》**](https://github.com/BlackLabelHQ/SymphonyRecomp)
+
+  使用 BlackLabelHQ 的 RecompOne 将北美 PlayStation 版《恶魔城：月下夜想曲》静态重编译为 C#；其运行时模拟 BIOS、内存映射 I/O、GPU 和光驱，使游戏无需主机 BIOS 即可原生运行。按覆盖段划分的函数映射与补丁加入了宽屏、便利性改进、随机器和作弊功能。项目借助 SOTN 反编译项目的资料为函数命名，但强调它是重编译而非反编译。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/symphonyrecomp-case/)
 
 #### 工具、项目与集成
 
