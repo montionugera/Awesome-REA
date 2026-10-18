@@ -15,7 +15,7 @@
 <!-- BEGIN GENERATED CONTENTS -->
 **按目标找工具与案例**
 
-- [网站](#website) (16) · [游戏](#game) (43) · [应用](#app) (42)
+- [网站](#website) (16) · [游戏](#game) (44) · [应用](#app) (42)
 - [原生二进制](#native-binary) (20) · [固件与硬件](#firmware) (12) · [协议](#protocol) (11)
 
 **论文与工作流**
@@ -24,7 +24,7 @@
 
 **更多浏览方式**
 
-- [全部案例](https://awesomerea.org/zh/cases/) (57) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
+- [全部案例](https://awesomerea.org/zh/cases/) (58) · [相关合集](#related-collections) (4) · [完整仓库索引](#完整仓库索引) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## 按任务查找
@@ -309,6 +309,12 @@ REA 标签指向单独维护的[上游 CLI 与 MCP 项目](https://github.com/mo
   重建 Perfect Dark 的 Nintendo 64 代码，并提供生成一致 ROM 的构建流程。项目将重建源码与使用者自备原 ROM 中的素材结合，再检查各版本产物的哈希。这是可复现构建研究案例，与独立的原生 PC 移植不同；此处的一致性结果仍为项目报告。
 
   案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/perfect-dark-matching-decomp-case/)
+
+- [**PaperBoat：基于反编译成果的 Paper Mario 原生移植**](https://github.com/HarbourMasters/PaperBoat)
+
+  以 pmret 和 Paper Mario DX 项目为基础，将 Paper Mario 反编译源码编译为基于 libultraship 的原生美版应用。Torch 把使用者自己的 ROM 转换为本地素材归档，移植另加入多种渲染后端、增强功能和归档式模组。桌面版已有正式发布；Android、iOS 和网页构建则在开发分支中有文档说明。
+
+  案例 · 独立重建 · [使用条件与证据](https://awesomerea.org/zh/resources/paperboat-paper-mario-port-case/)
 
 #### 工具、项目与集成
 

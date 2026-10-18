@@ -1481,5 +1481,15 @@
       "验证流程将一个以 SHA-256 固定的 harmony-next-pipeline 1.0.1 HAP（源码仓库采用 MIT 许可）下载到被忽略的目录，检查清单真实性、投影确定性、Stage 路径提示、精确组件集合、完整覆盖以及命令行与 MCP 的一致性。该测试包的编译器／SDK 版本与可复现构建尚未确立，此流程也未完成路线图 issue #1431 中固定工具链的验收；缺少 META-INF 条目不能说明包是否已签名。",
       "REA 声明 MIT。被分析的应用包保留各自许可；指南说明测试包内捆绑组件的许可未经独立审核，下载的产物也不会再分发。已合并的 PR #1447 引入了这一增量。本合集未运行 REA 或任何应用包。"
     ]
+  },
+  "paperboat-paper-mario-port-case": {
+    "name": "PaperBoat：基于反编译成果的 Paper Mario 原生移植",
+    "requirements": [
+      "所审 develop 快照晚于 1.0.3 版（2026-10-11），该版本提供 Windows、Linux 和 macOS 安装包。CMake 以 VERSION_US 编译反编译项目的游戏 C 源码，并用移植代码替换 N64 启动层和大部分系统层。这是有意加入增强与修复的原生移植，不是生成一致 ROM 的构建，也不是静态重编译。",
+      "需使用者自备美版 Paper Mario ROM，且 SHA-1 与 README 所列一致；config.yml 仅包含该哈希的配方，README 声明不包含受版权保护的素材。Torch 在使用者的电脑或设备上生成 pm64.o2r 游戏归档，该归档从不随应用分发。",
+      "源码构建需 Torch 与 libultraship 子模块、CMake 3.24+、Ninja 及 C99／C++20 编译器。Windows 使用 Visual Studio 2022 的 clang-cl，普通 MSVC cl.exe 不支持这些 C99 反编译源码。渲染后端为 DirectX 11、OpenGL 和 Metal。文档还说明 Android arm64-v8a、iOS 16.3+ 和 Emscripten 构建，这些平台禁用脚本与原生模组。",
+      "CI 工作流构建 Linux、Windows、macOS、iOS、Android 和网页产物，并检查打包内容；平台指南称 CI 从不接触 ROM，且其提到的桌面检查脚本在所审源码树中并不存在。夜间构建标明仅供试玩，可能出现错误和崩溃。项目未报告游戏行为等价或性能结果，本合集也未运行任何内容。",
+      "仓库附有 CC0-1.0 文本，但 GitHub 未识别出所致谢的 pmret 和 Paper Mario DX 仓库的许可证，子模块也另有条款；因此不把该 CC0 文件视为对继承代码或游戏内容的授权。README 说明在 HarbourMasters 政策范围内接受 AI 辅助的拉取请求；这不能确立 REA 使用或可量化的 AI 贡献。"
+    ]
   }
 }
