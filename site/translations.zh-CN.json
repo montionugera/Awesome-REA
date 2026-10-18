@@ -1472,5 +1472,15 @@
       "文档中的验证脚本经编译后的命令行与 stdio MCP 运行两个工具，以 Flutter Gallery 2.9.2 发布版 APK 对照固定的期望文件：三个 ABI 上快照哈希一致，并核对引擎标签与 URI 数量；另用普通 aapt2 构建的 APK 检查不误报。指南报告 Gallery 流程与 147 项 Flutter 专项测试在 macOS 14.8.9 x86-64 与 Windows 11 x64 虚拟机中通过。",
       "在已合并的 PR #1582 中，一位独立审阅者报告：在合并前的分支版本上，三个 F-Droid 应用 PocketDhamma、Flutter McSweepy 与 cone 的哈希、ELF 段和 package 列表与 readelf／strings 检查一致，非 Flutter 对照应用未被识别为 Flutter；讨论串记录了对所发现问题的修复。这些检查针对构建身份与结构，不是应用逻辑重建。REA 声明 MIT，所分析的 APK 保留各自许可；本合集未运行 REA 或任何 APK。"
     ]
+  },
+  "pokemon-emerald-decomp-case": {
+    "name": "《宝可梦 绿宝石》：生成一致 ROM 的 Game Boy Advance 反编译重建",
+    "requirements": [
+      "README 将其描述为《宝可梦 绿宝石》的反编译项目，构建单一 ROM：pokeemerald.gba；Makefile 设定游戏代码 BPEE、修订版 0，CI 构建英文版。大部分游戏代码为 C，启动代码、m4a 音频库的一部分及 GameCube 多重启动库仍为汇编文件，三个多重启动程序（树果修复、Colosseum、e-Reader）以预编译 .gba 二进制形式收录。产物是 GBA ROM，不是原生 PC 移植。",
+      "文档所述的构建不读取原 ROM：图像、音频采样和地图数据以 PNG、WAV／AIF 和 JSON 文件提交在仓库中，由附带工具转换。rom.sha1 记录目标英文版的 SHA-1 为 f3ae088181bf583e55daf962a92bb46f4f1d07b7，README 链接该 ROM 的 No-Intro 条目。",
+      "INSTALL.md 涵盖 Windows（推荐 WSL1，也可用 msys2 或 Cygwin）、macOS 和 Linux。在 Debian／Ubuntu 上需 build-essential、binutils-arm-none-eabi、git 和 libpng-dev；一致性构建还需先构建 pret/agbcc 并安装到仓库中。make modern 则改用 devkitARM 的 arm-none-eabi-gcc，输出 pokeemerald_modern.gba。",
+      "make compare 将构建出的 ROM 与 rom.sha1 做 SHA-1 校验，匹配时报告 pokeemerald.gba: OK；Makefile 注明比对只适用于非现代编译器构建。CI 以 COMPARE=1 构建，并另外构建现代目标。这些检查确认该单一版本的字节一致性，不覆盖游戏行为路径；本合集未自行构建 ROM。",
+      "仓库没有顶层许可证文件，GitHub 也未识别出许可证；许可证文件只覆盖部分附带工具，agbcc 的 GCC 源码附 GPL v2。原游戏的代码、图像和音频仍受其权利人约束。所审来源未确立 AI 或 REA 使用，也不主张运行复现。"
+    ]
   }
 }
