@@ -1481,5 +1481,15 @@
       "验证流程将一个以 SHA-256 固定的 harmony-next-pipeline 1.0.1 HAP（源码仓库采用 MIT 许可）下载到被忽略的目录，检查清单真实性、投影确定性、Stage 路径提示、精确组件集合、完整覆盖以及命令行与 MCP 的一致性。该测试包的编译器／SDK 版本与可复现构建尚未确立，此流程也未完成路线图 issue #1431 中固定工具链的验收；缺少 META-INF 条目不能说明包是否已签名。",
       "REA 声明 MIT。被分析的应用包保留各自许可；指南说明测试包内捆绑组件的许可未经独立审核，下载的产物也不会再分发。已合并的 PR #1447 引入了这一增量。本合集未运行 REA 或任何应用包。"
     ]
+  },
+  "lighthouse-banjo-kazooie-port-case": {
+    "name": "Lighthouse：基于反编译项目的《Banjo-Kazooie》PC 移植",
+    "requirements": [
+      "需要 README 中以 SHA-1 标明的受支持零售版 .z64 ROM：美版 1.0、美版 1.1、日版或 PAL 版。ROM 会被提取为本地 bk.o2r 归档；其他地区版本可作为语言包加入，ROM 修改版则需以美版 1.0 为基础。仓库不含受版权保护的游戏素材。",
+      "1.1.0“Hatteras Alfa”版本（2026-08-17）提供 Windows x64、Linux 和 macOS 压缩包。渲染后端包括 DirectX 11（Windows 默认）、全平台可用的 OpenGL 以及 Metal（macOS 默认）。",
+      "源码构建需要 libultraship 与 Torch 子模块和 CMake；Windows 上另需 Visual Studio 2022（MSVC v143）、Python 3 和至少 8 GB 内存，Linux 上需 GCC 或 Clang、Ninja 及列出的 SDL2、libzip、tinyxml2、spdlog、Boost 和 Vorbis 软件包，macOS 上需 Xcode 及列出的软件包。构建目标会从 ROM 提取 bk.o2r，并将移植专用素材打包为 lighthouse.o2r。",
+      "README 未公布字节一致或保真度检查。大多数受支持的 ROM 修改版尚未充分测试，CI 每夜构建仅供试玩且可能崩溃；本合集未构建或运行。",
+      "仓库以 CC0 1.0 发布；子模块保留各自许可证，游戏本身不在许可范围内。README 披露曾借助 AI 收集信息，并按 HarbourMasters 政策接受使用 AI 的拉取请求；所审来源未记录 REA 使用。"
+    ]
   }
 }

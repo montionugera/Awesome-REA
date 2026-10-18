@@ -15,7 +15,7 @@ An independent collection of tools, case studies and research for websites, game
 <!-- BEGIN GENERATED CONTENTS -->
 **Tools and cases by target**
 
-- [Website](#website) (16) · [Game](#game) (43) · [App](#app) (42)
+- [Website](#website) (16) · [Game](#game) (44) · [App](#app) (42)
 - [Native Binary](#native-binary) (20) · [Firmware and Hardware](#firmware) (12) · [Protocol](#protocol) (11)
 
 **Research and workflows**
@@ -24,7 +24,7 @@ An independent collection of tools, case studies and research for websites, game
 
 **More ways to browse**
 
-- [All cases](https://awesomerea.org/cases/) (57) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
+- [All cases](https://awesomerea.org/cases/) (58) · [Related Collections](#related-collections) (4) · [Full Repository Index](#full-repository-index) (2,836)
 <!-- END GENERATED CONTENTS -->
 
 ## Find by task
@@ -308,6 +308,12 @@ REA labels refer to the separate [upstream CLI and MCP project](https://github.c
   Reconstructs Perfect Dark’s Nintendo 64 code with a documented matching-ROM build. The project combines reconstructed source with assets from a user-supplied original ROM, then checks version-specific artifact hashes. It is a reproducible-build research case, distinct from the separate native PC port; matching results remain project-reported here.
 
   Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/perfect-dark-matching-decomp-case/)
+
+- [**Lighthouse: a Banjo-Kazooie PC port built on the decompilation**](https://github.com/HarbourMasters/Lighthouse)
+
+  A native Windows, Linux and macOS port of Banjo-Kazooie that compiles game C sources, many tagged with their Banjo-Kazooie decompilation file paths, against libultraship, a reimplementation of the N64 SDK. Torch extracts the user’s ROM into an asset archive, and the port adds Anchor multiplayer, romhack and language-pack support and a randomizer. Unlike Banjo: Recompiled, it builds from decompiled source rather than statically recompiling the ROM’s code.
+
+  Case study · Independent reconstruction · [Requirements & evidence](https://awesomerea.org/resources/lighthouse-banjo-kazooie-port-case/)
 
 #### Tools, projects and integrations
 
